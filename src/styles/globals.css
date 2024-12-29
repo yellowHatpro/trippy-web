@@ -2,32 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 210 50% 98%;
+    --foreground: 220 40% 12%;
+    
+    --card: 0 0% 98%;
+    --card-foreground: 220 40% 12%;
+    
+    --popover: 0 0% 98%;
+    --popover-foreground: 220 40% 12%;
+    
+    --primary: 215 90% 22%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 220 40% 12%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 220 20% 40%;
+    
+    --accent: 215 90% 22%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 215 90% 22%;
+    
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 215 50% 10%;
+    --foreground: 210 40% 98%;
+    
+    --card: 215 50% 8%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 215 50% 8%;
+    --popover-foreground: 210 40% 98%;
+    
+    --primary: 215 90% 22%;
+    --primary-foreground: 210 40% 98%;
+    
+    --secondary: 215 50% 16%;
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 215 50% 16%;
+    --muted-foreground: 210 40% 80%;
+    
+    --accent: 215 50% 16%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 215 50% 16%;
+    --input: 215 50% 16%;
+    --ring: 215 90% 22%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.text-balance {
+  text-wrap: balance;
 }

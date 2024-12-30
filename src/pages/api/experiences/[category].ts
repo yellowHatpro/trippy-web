@@ -7,6 +7,8 @@ const experienceData: Record<string, ExperienceCategory> = {
     title: "Adventure Tours",
     description:
       "Push your limits and discover the thrill of adventure in some of the world's most spectacular locations.",
+    image:
+      "https://images.unsplash.com/photo-1682686580391-615b1f28e5ee?q=80&w=2940&auto=format&fit=crop",
     experiences: [
       {
         title: "Mountain Trekking",
@@ -48,6 +50,8 @@ const experienceData: Record<string, ExperienceCategory> = {
     title: "Cultural Tours",
     description:
       "Immerse yourself in authentic local traditions and create meaningful connections with cultures around the world.",
+    image:
+      "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?q=80&w=2940&auto=format&fit=crop",
     experiences: [
       {
         title: "Traditional Tea Ceremony",
